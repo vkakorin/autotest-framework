@@ -8,7 +8,7 @@ class Database:
         self.cursor = self.connection.cursor()
 
     def test_connection(self):
-        sqlite_select_query = "SELECT sqlite_version();"
+        sqlite_select_query = "SELECT sqlite_version()"
         self.cursor.execute(sqlite_select_query)
         record = self.cursor.fetchall()
         print(f"Connected successfully. SQLite Database Version is: {record}")
